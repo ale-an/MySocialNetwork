@@ -1,0 +1,130 @@
+﻿body {
+    background-color: #cce6ff;
+}
+
+.main {
+    -ms-flex: 40%; /* IE10 */
+    flex: 40%;
+    padding: 20px;
+}
+
+.side {
+    -ms-flex: 60%; /* IE10 */
+    flex: 60%;
+    padding: 20px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #edeef0;
+}
+
+.topnav {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+
+.main-img {
+    width: 100%;
+    max-width: max-content;
+}
+
+.login-area {
+    padding: 24px;
+    margin-bottom: 18px;
+    border-radius: 24px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.color-gray {
+    color: gray;
+}
+
+.please {
+    animation-duration: 25s;
+    animation-name: pray;
+}
+
+@keyframes pray {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 170%;
+    }
+}
+
+.registration-form {
+    background-color: white;
+    padding: 32px;
+    border-radius: 24px;
+    width: 60%;
+    margin: auto;
+}
+
+.full-width-button {
+    width: 100%;
+}
+
+.profile-photo-container {
+    max-width: 320px;
+    margin-right: 32px;
+}
+
+.profile-photo {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.profile-info-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container {
+    background-color: #b3daff;
+    padding: 32px;
+    border-radius: 32px;
+}
+
+.profile-name{
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.line {
+    border: 0;
+    border-bottom: 1px dashed black;
+    background: transparent;
+}
+
+.center-align {
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ava
+{
+    width: 20%;
+    max-width: max-content;
+}

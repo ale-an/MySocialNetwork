@@ -1,0 +1,51 @@
+﻿@model BusinessLayer.Models.ProfileViewModel
+<div class="profile-container">
+    <h2 class="profile-name">@Model.FullName</h2>
+    <div class="profile-info-container">
+        <div class="profile-photo-container">
+            <img src="@Model.Photo" alt="" class="profile-photo"/>
+            <div>
+                <a asp-area="" asp-controller="Profile" asp-action="Edit" class="btn btn-primary full-width-button">Редактировать</a>
+            </div>
+        </div>
+        <div>
+            <div>
+                <hr class="line"/>
+                <div>
+                    <span>Статус: @Model.Status</span>
+                </div>
+                <div>
+                    <span>Дата рождения: @Model.BirthDate.ToString("dd MMMM yyyy") г.</span>
+                </div>
+                <div>
+                    <span>О себе: @Model.AboutMe</span>
+                </div>
+                <div>
+                    <span>Email: @Model.Email</span>
+                </div>
+                <hr class="line"/>
+            </div>
+            <div>
+                <hr class="line"/>
+                <span>СПИСОК ДРУЗЕЙ</span>
+                @foreach (var user in Model.Friends)
+                {
+                    <div>
+                        <div class="center-align">
+                            <img src="@user.Photo" alt=""/>
+                        </div>
+                        <div class="center-align">
+                            <label>@user.Name</label>
+                        </div>
+                        <form asp-controller="Friends" asp-action="DeleteFriend" asp-route-id="@user.Id" method="post">
+                            <button type="submit" class="btn btn-sm btn-primary center-align">
+                                Удалить из друзей
+                            </button>
+                        </form>
+                    </div>
+                }
+                <hr class="line"/>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+﻿@model BusinessLayer.Models.RegisterViewModel
+
+<div class="registration-form">
+    <h4 class="text-center">Регистрация</h4>
+    <form method="post" asp-controller="Registration" asp-action="Registration">
+        <div class="form-group">
+            <input value="@Model.FirstName" name="FirstName" type="text" class="form-control" placeholder="Имя"/>
+        </div>
+        <div class="form-group">
+            <input value="@Model.LastName" name="LastName" type="text" class="form-control" placeholder="Фамилия"/>
+        </div>
+        <div class="form-group">
+            <input value="@Model.MiddleName" name="MiddleName" type="text" class="form-control" placeholder="Отчество"/>
+        </div>
+        <div class="form-group">
+            <input value="@Model.Email" name="Email" type="email" class="form-control" placeholder="Электронная почта"/>
+        </div>
+        <div class="form-group">
+            <input value="@Model.Nickname" name="Nickname" type="text" class="form-control" placeholder="Никнейм"/>
+        </div>
+        <div class="form-group">
+            <input value="@Model.Birthday" name="Birthday" type="date" class="form-control" placeholder="Дата рождения"/>
+        </div>
+        <div class="form-group">
+            <input value="@Model.Password" name="Password" type="password" class="form-control" placeholder="Пароль"/>
+        </div>
+        <div class="form-group">
+            <input value="@Model.ConfirmPassword" name="ConfirmPassword" type="password" class="form-control" placeholder="Подтвердите пароль"/>
+        </div>
+        <div>
+            <input type="submit" value="Зарегистрироваться" class="btn btn-success"/>
+        </div>
+    </form>
+</div>
